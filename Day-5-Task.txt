@@ -1,0 +1,249 @@
+Question 01:
+         a)
+Anonymous:To find odd numbers
+ let a=[1,2,3,4,5,6];
+ var odd=function(){
+ let o=a.filter(n=>n%2!=0);
+ return o;
+ }
+ console.log(odd());
+
+
+ IIFE:To find odd numbers
+ let a=[1,2,3,4,5,6];
+ (function(){
+ let o=a.filter(n=>n%2!=0);
+ console.log(o);
+ })
+ ();
+
+           b)
+Anonymous function:Convert all the strings to title caps in a string array
+let a="India is my country";
+let b=a.split(" ");
+let e=[];
+var t=function(){
+for(let i=0;i<b.length;i++){
+  let c=b[i];
+   let d=c.charAt(0).toUpperCase()+c.slice(1,c.length);
+   e.push(d);
+}
+ return e.join(" ");
+}
+console.log(t());
+
+
+IIFE:Convert all the strings to title caps in a string array
+let a="India is my country";
+let b=a.split(" ");
+let e=[];
+(function foo(){
+for(let i=0;i<b.length;i++){
+  let c=b[i];
+   let d=c.charAt(0).toUpperCase()+c.slice(1,c.length);
+   e.push(d);
+   
+}
+ console.log(e.join(" "));
+})
+();
+
+           c)
+Anonymous:To sum all the numbers in an array
+let a=[1,2,3,4,5,6];
+var sum=function(){
+let c=a.reduce((acc,ele)=>acc+ele);
+return (c);
+
+}
+console.log(sum());
+
+IIFE:To sum all the numbers in an array
+let a=[1,2,3,4,5,6];
+(function(){
+let o=a.reduce((acc,ele)=>acc+ele);
+console.log(o);
+})
+();
+        d)
+Anonymous:Return all the prime numbers in an array
+let num = [0,1,2,3,4,5,6];
+let result = [];
+var prime= function (num) {
+  if(num < 2) 
+  return false;
+
+  for (let k = 2; k < num; k++){
+    if(num % k == 0){
+      return false;
+    }
+  }
+  return true;
+}
+num.forEach(function (element) {
+  const item = prime(element);
+  if (item) {
+    result.push(element);
+  }
+});
+console.log(result);
+
+IIFE:Return all the prime numbers in an array
+           
+
+
+          e)
+Anonymous: return all the palindromes in an array    
+var arr=["dad","mad","cat","mom"];
+var b=[];
+var palindrome=function(){  
+  for(let i=0;i<arr.length;i++){
+    let a=arr[i].split("").reverse().join("");
+     if(arr[i]==a){
+       b.push(a);
+      }  
+  }
+  return b;
+ 
+}
+console.log(palindrome());
+
+IIFE: return all the palindromes in an array
+var arr=["dad","mad","cat","mom"];
+let b=[];
+(function foo(){
+   for(let i=0;i<arr.length;i++){
+    let a=arr[i].split("").reverse().join("");
+     if(arr[i]==a){
+     b.push(a);
+      }  
+      } 
+      console.log (b);
+  })
+();    
+
+            h)
+Anonymous:Rotate an array by k times
+var arr=[1,2,3,4,5,6,7];
+let k=3;
+var a=arr.length-k;
+var b=[];
+var c=[];
+
+var r=function(){
+for(let i=4;i<arr.length;i++){
+  b.push(arr[i]);
+  
+}
+for(let j=0;j<a;j++){ 
+ c.push(arr[j]); 
+}
+return b.concat(c);
+}
+console.log(r());      
+
+IIFE: Rotate an array by k times
+var arr=[1,2,3,4,5,6,7];
+let k=3;
+var a=arr.length-k;
+var b=[];
+var c=[];
+
+(function foo(){
+for(let i=4;i<arr.length;i++){
+  b.push(arr[i]);
+  
+}
+for(let j=0;j<a;j++){ 
+ c.push(arr[j]); 
+}
+console.log( b.concat(c));
+})
+();   
+
+          g)
+Anonymous:Remove duplicates in an array
+var arr=[11,12,2,3,5,1,2,12];
+var d=function(){
+  var unique=[];
+  for(let i=0;i<arr.length;i++){
+    if(unique.indexOf(arr[i])===-1){
+     unique.push(arr[i]); 
+      
+    }
+    
+  }
+  return unique;
+  
+  
+}
+console.log(d());   
+
+IIFE:Remove duplicates in an array
+var arr=[11,12,2,3,5,1,2,12];
+(function foo(){
+  var unique=[];
+  for(let i=0;i<arr.length;i++){
+    if(unique.indexOf(arr[i])===-1){
+     unique.push(arr[i]); 
+      
+    }
+    
+  }
+ console.log (unique);
+  
+  
+})
+ 
+();   
+
+
+Question:03 (Arrow Function)
+
+a)Return Odd numbers in an arrray
+let a=[1,2,3,4,5,6];
+ var odd=()=>{
+   let o=a.filter(n=>n%2!=0);
+ return o;
+   
+ }
+ console.log(odd());  
+
+b)Convert all the strings to title caps in a string array
+let a="India is my country";
+let b=a.split(" ");
+let e=[];
+var t=()=>{
+for(let i=0;i<b.length;i++){
+  let c=b[i];
+   let d=c.charAt(0).toUpperCase()+c.slice(1,c.length);
+   e.push(d);
+}
+ return e.join(" ");
+}
+console.log(t());   
+
+c) To sum all numbers in an array  
+
+let a=[1,2,3,4,5,6];
+var sum=()=>{
+let c=a.reduce((acc,ele)=>acc+ele);
+return (c);
+
+}
+console.log(sum());  
+
+e)Retrun all palindromes in an array
+var arr=["dad","mad","cat","mom"];
+var b=[];
+var palindrome=()=>{  
+  for(let i=0;i<arr.length;i++){
+    let a=arr[i].split("").reverse().join("");
+     if(arr[i]==a){
+       b.push(a);
+      }  
+  }
+  return b;
+ 
+}
+console.log(palindrome());                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
