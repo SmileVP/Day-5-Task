@@ -67,29 +67,31 @@ console.log(o);
 ();
         d)
 Anonymous:Return all the prime numbers in an array
-let num = [0,1,2,3,4,5,6];
-let result = [];
-var prime= function (num) {
-  if(num < 2) 
-  return false;
-
-  for (let k = 2; k < num; k++){
-    if(num % k == 0){
-      return false;
+var numArray=[2,3,4,5,6,7,8,9]
+let a=function(){
+  let b=numArray.filter((number)=>{
+    for(let i=2;i<=Math.sqrt(number);i++){
+      if(number%i===0)return false;
     }
+    return true;
+  });
+    return b;
   }
-  return true;
-}
-num.forEach(function (element) {
-  const item = prime(element);
-  if (item) {
-    result.push(element);
-  }
-});
-console.log(result);
+console.log(a());
 
 IIFE:Return all the prime numbers in an array
-           
+ 
+(function a(){
+  var numArray=[2,3,4,5,6,7,8,9]
+  let b=numArray.filter((number)=>{
+    for(let i=2;i<=Math.sqrt(number);i++){
+      if(number%i===0)return false;
+    }
+   return true
+  });
+    console.log(b);
+  })
+  ();          
 
 
           e)
@@ -121,6 +123,70 @@ let b=[];
       console.log (b);
   })
 ();    
+
+            f)
+Anonymous:Return the median of two sorted arrays of same size
+let a=[1,2,3,4];
+let b=[5,6,7,8];
+let arr=a.concat(b);
+let median;
+
+let c=function(){
+  let middleIndex=Math.floor(arr.length/2);
+  median=(arr[middleIndex]+arr[middleIndex-1])/2;
+  return median;
+}
+console.log(c());
+
+IIFE:Return the median fo two sorted arrays of same size
+let a=[1,2,3,4];
+let b=[5,6,7,8];
+let arr=a.concat(b);
+let median;
+
+(function a(){
+  let middleIndex=Math.floor(arr.length/2);
+  median=(arr[middleIndex]+arr[middleIndex-1])/2;
+  console.log(median);
+})
+
+();
+
+             g)
+Anonymous:Remove duplicates in an array
+var arr=[11,12,2,3,5,1,2,12];
+var d=function(){
+  var unique=[];
+  for(let i=0;i<arr.length;i++){
+    if(unique.indexOf(arr[i])===-1){
+     unique.push(arr[i]); 
+      
+    }
+    
+  }
+  return unique;
+  
+  
+}
+console.log(d());   
+
+IIFE:Remove duplicates in an array
+var arr=[11,12,2,3,5,1,2,12];
+(function foo(){
+  var unique=[];
+  for(let i=0;i<arr.length;i++){
+    if(unique.indexOf(arr[i])===-1){
+     unique.push(arr[i]); 
+      
+    }
+    
+  }
+ console.log (unique);
+  
+  
+})
+ 
+();   
 
             h)
 Anonymous:Rotate an array by k times
@@ -161,41 +227,7 @@ console.log( b.concat(c));
 })
 ();   
 
-          g)
-Anonymous:Remove duplicates in an array
-var arr=[11,12,2,3,5,1,2,12];
-var d=function(){
-  var unique=[];
-  for(let i=0;i<arr.length;i++){
-    if(unique.indexOf(arr[i])===-1){
-     unique.push(arr[i]); 
-      
-    }
-    
-  }
-  return unique;
-  
-  
-}
-console.log(d());   
-
-IIFE:Remove duplicates in an array
-var arr=[11,12,2,3,5,1,2,12];
-(function foo(){
-  var unique=[];
-  for(let i=0;i<arr.length;i++){
-    if(unique.indexOf(arr[i])===-1){
-     unique.push(arr[i]); 
-      
-    }
-    
-  }
- console.log (unique);
-  
-  
-})
- 
-();   
+        
 
 
 Question:03 (Arrow Function)
@@ -232,6 +264,20 @@ return (c);
 
 }
 console.log(sum());  
+
+d) Return all the prime numbers in an array
+
+var a=()=>{
+  var numArray=[2,3,4,5,6,7,8,9]
+  let b=numArray.filter((number)=>{
+    for(let i=2;i<=Math.sqrt(number);i++){
+      if(number%i===0)return false;
+    }
+   return true
+  });
+   return b;
+  }
+  console.log(a());
 
 e)Retrun all palindromes in an array
 var arr=["dad","mad","cat","mom"];
